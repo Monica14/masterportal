@@ -1,0 +1,53 @@
+extends layout1
+block content        
+        section.page.container          
+          .row
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Settings
+                .box-content
+                  form(id='create_forms')
+                    table.table
+                      thead.thead-default
+                        tr                    
+                          th Field
+                          th Type
+                      tbody
+                        tr
+                          th(scope='row') Protocol
+                          td 
+                            input(type='text', name='fname')
+                        tr
+                          th(scope='row') Port Number
+                          td 
+                            input(type='text', name='fname')
+                        tr
+                          th(scope='row') Username
+                          td 
+                            input(type='text', name='fname')
+                        tr
+                          th(scope='row') Password
+                          td 
+                            input(type='text', name='fname')
+                        tr
+                          th(scope='row') Encrytion Type
+                          td 
+                            input(type='text', name='fname')
+                        tr
+                          th(scope='row')
+                          td(colspan=3)
+                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            br              
+                            input.register_btn.btn.btn-primary(type='button', value='Save' id="check")                        
+                //.box-footer
+                  button.btn.btn-primary(type='submit')
+                    i.icon-ok
+                    |                             Submit
+              
+              br
+              |   
+              br
+              .msg1div
+                
+    

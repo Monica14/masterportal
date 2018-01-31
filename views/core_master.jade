@@ -1,0 +1,208 @@
+extends layout1
+block content        
+        section.page.container          
+          .row
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Create Forms
+                .box-content
+                  form(id='create_forms')
+                    table.table
+                      thead.thead-default
+                        tr                    
+                          th Field
+                          th Type
+                      tbody
+                        tr
+                          th(scope='row') Form Name
+                          td 
+                            input(type='text',ng-model="fname")
+                        tr
+                          th(scope='row')
+                          td(colspan=3)
+                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            br              
+                            input.register_btn.btn.btn-primary(type='button', value='Submit', id="check",ng-click="submit()")                        
+                //.box-footer
+                  button.btn.btn-primary(type='submit')
+                    i.icon-ok
+                    |                             Submit
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Create Tabs
+                .box-content
+                  form(id='create_tabs')
+                    table.table
+                      thead.thead-default
+                        tr                    
+                          th Field
+                          th Type
+                      tbody
+                        tr
+                          th(scope='row') Tab Name
+                          td 
+                            input(type='text', name='fname',ng-model='tab_name')  
+                        tr
+                          th(scope='row') Select Form
+                          td 
+                            select(ng-model='form_name1')
+                              - each item in tabledata
+                                  option  #{ item.form_name } 
+                        tr
+                          th(scope='row')
+                          td(colspan=3)
+                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            br              
+                            input.register_btn.btn.btn-primary(type='button', value='Submit' id="check",ng-click="create_tab()")                        
+                //.box-footer
+                  button.btn.btn-primary(type='submit')
+                    i.icon-ok
+                    |                             Submit
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Add Fields               
+                .box-content                  
+                  form(id='register_form')
+                    table.table
+                      thead.thead-default
+                        tr                    
+                          th Field
+                          th Type
+                      tbody
+                        tr
+                          th(scope='row') Field Name
+                          td 
+                            input(type='text', name='field_name',ng-model='field_name',value="{{ DataService[0].field_name }}")     
+                        tr
+                          th(scope='row') Field Type                         
+                          td
+                            input(type='radio', value='textbox', id='textbox',ng-model='field_type',name='field_type',ng-click='text_field($event)')
+                            |   Textbox Field 
+                            input(type='radio', value='date', id='date',ng-model='field_type',name='field_type',ng-click='text_field($event)') 
+                            |   Date Field
+                            input(type='radio', value='dropdown', id='dropdown',ng-model='field_type',name='field_type',ng-click='text_field($event)') 
+                            |   Dropdown Field
+                            input(type='radio', value='chekbox', id='chekbox',ng-model='field_type',name='field_type',ng-click='text_field($event)') 
+                            |   Checkbox Field
+                            input(type='radio', value='password', id='password',ng-model='field_type',name='field_type',ng-click='text_field($event)') 
+                            |   Password Field 
+                            input(type='radio', value='radio', id='radio',ng-model='field_type',name='field_type',ng-click='text_field($event)') 
+                            |   Radio Field 
+                            input(type='radio', value='textarea', id='textarea',ng-model='field_type',name='field_type',ng-click='text_field($event)') 
+                            |   Textarea Field 
+                        tr(id='other_information_{{fn}}')
+                          th(scope='row',id='other_information1_{{fn}}') Extra Information
+                          td 
+                            |   Number Of {{fn}} Box 
+                            input(type='text', ng-model='other_information_chekbox_num' id="other_information_chekbox_num") 
+                            |   {{fn}} field Name 
+                            input(type='text', ng-model='other_information_chekbox',id='other_information_chekbox')
+                        tr
+                          th(scope='row') Validate
+                          td 
+                            input(type='text', name='regular_exp',ng-model='regular_exp',value="{{ DataService[0].validate }}")   
+                        tr
+                          th(scope='row') Form Name
+                          td                             
+                            select(ng-model='form_name2' id="form_name2")
+                              - each item in tabledata
+                                option  #{ item.form_name } 
+                        tr
+                          th(scope='row') Tab Name
+                          td 
+                            select(ng-model='tab_name1' id="tab_name1")                              
+                              - each item in tabledata
+                                var check = #{ item.tab_name }
+                                if  item.tab_name != ''
+                                   option  #{ item.tab_name } 
+                        tr
+                          th(scope='row') Name Field
+                          td 
+                            input(type='text', name='namefield',ng-model='namefield',value="{{ DataService[0].namefield }}")
+                        tr
+                          th(scope='row') Validation Message
+                          td 
+                            input(type='text', name='error_message',ng-model='error_message',value="{{ DataService[0].error_message }}")
+                                
+                        tr
+                          th(scope='row') Compulsory 
+                            lable(style='color:red') *
+                          td 
+                            input(type='radio', value='yes',ng-model='compulsory',id="comp_yes")
+                            |  Yes  
+                            input(type='radio', value='no',ng-model='compulsory',id="comp_no")
+                            |  No 
+                        tr
+                          th(scope='row') Select Database 
+                            lable(style='color:red') *
+                          td 
+                            select(ng-model='dbname1' id="dbname1")                              
+                              - each item1 in dblist
+                                if  item1.Database != ''
+                                   option  #{ item1.Database }   
+                        tr
+                          th(scope='row') Select Table 
+                            lable(style='color:red') *
+                          td 
+                            select(ng-model='tablename1' id="tablename1")                              
+                              - each item1 in tablelist
+                                if  item1.TABLE_NAME != ''
+                                   option  #{ item1.TABLE_NAME } 
+                        tr
+                          th(scope='row') Column Name
+                          td 
+                            input(type='text', name='columnname',ng-model='columnname',value="{{ DataService[0].columnname }}") 
+                        tr
+                          th(scope='row') Column Type
+                          td 
+                            input(type='text', name='coltype',ng-model='coltype',value="{{ DataService[0].coltype }}") 
+                        tr
+                          th(scope='row') Status 
+                            lable(style='color:red') *
+                          td 
+                            input(type='radio', value='Active',ng-model='fieldstatus',id="Active")
+                            |  Active  
+                            input(type='radio', value='Inactive',ng-model='fieldstatus',id="Inactive")
+                            |  Inactive 
+                        tr
+                          th(scope='row')
+                          td(colspan=3)
+                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            br              
+                            input.register_btn.btn.btn-primary(type='button', value='Submit',id="save_field",ng-click="create_field()")  
+                            input.register_btn.btn.btn-primary(type='button', value='Update',class="update_field",ng-click="update_field($event)",id="{{ DataService[0].id }}")        
+                  .msgdiv
+                  br                 
+                //.box-footer
+                  button.btn.btn-primary(type='submit')
+                    i.icon-ok
+                    |                             Submit
+             
+                .msg1div
+                  table.table
+                        thead.thead-default
+                          tr                    
+                            th Field
+                            th Action
+                        tbody
+                          tr(ng-repeat="columndata in tabledata2")
+                            th(scope='row') {{ columndata.field_name }}
+                            td                       
+                              input(type='button',value="Edit",id="{{ columndata.id }}",ng-click="editpage($event)")
+                              input(type='button',ng-click="delcol($event)",value="Delete",id="{{ columndata.columnname }},{{ columndata.tablename }},{{ columndata.dbname }}")
+                //.msg1div
+                  table.table
+                        thead.thead-default
+                          tr                    
+                            th Field
+                            th Action
+                        tbody
+                          tr(ng-repeat="columndata in columndata")
+                            th(scope='row') {{ columndata.COLUMN_NAME }}
+                            td 
+                              input(type='button',ng-click="delcol($event)",value="Delete",id="{{ columndata.COLUMN_NAME }},{{ columndata.TABLE_NAME }},{{ columndata.TABLE_SCHEMA }}")
+                            
+    

@@ -1,0 +1,74 @@
+extends layout
+block content      
+        input(type="hidden" name="_csrf" value="#{csrfToken}")  
+        section.page.container          
+          .row
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Registration
+                .box-content
+                  form.form-inline(id='register_form')
+                    | First name :
+                    br
+                    input(type='text', name='fname', value='Mickey')
+                    br
+                    |   Last name :
+                    br
+                    input(type='text', name='lname', value='Mouse')
+                    br
+                    |   Email ID :
+                    br
+                    input(type='text', name='email_id')
+                    br
+                    |   Mobile Number :
+                    br
+                    input(type='text', name='mobilenumber')
+                    br
+                    |   Password :
+                    br
+                    input(type='text', name='password')
+                    br
+                    |   Confirm Password:
+                    br
+                    input(type='text', name='confirm_password')
+                    input(type='hidden', name='tablename',value='register',id='tablename')
+                    br
+                    |   
+                    br
+                    br
+                    input.register_btn.btn.btn-primary(type='button', value='Submit' id="register_here")
+                  .msgdiv
+                  br                 
+                //.box-footer
+                  button.btn.btn-primary(type='submit')
+                    i.icon-ok
+                    |                             Submit
+              br
+              |   
+              br
+              .msg1div
+                table.table.table-bordered.table-responsive
+                  thead
+                    tr
+                      th Sr.No
+                      th Name
+                      th Email ID
+                      th Action                    
+                  tbody
+                    - var cnt = 1;
+                    - each item in tabledata
+                      form(id='update_form'+cnt)
+                        tr
+                          td=cnt
+                          td
+                            input(type='text', placeholder=item.fname, name='fname')
+                          td
+                            input(type='text', placeholder=item.email_id, name='email_id')                    
+                          td
+                            input.update_here(type='button', style='float: right;',name=cnt, id=item.email_id, value="Update")
+                            input.delete_here(type='button', style='float: right;',name=cnt, id=item.email_id, value="Delete")
+                            input(type='hidden', name='tablename',value='register',id='tablename')
+                            input(type='text', value=item.email_id, name='email_id1')
+                          - cnt++;
+    

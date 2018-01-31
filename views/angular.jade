@@ -1,0 +1,92 @@
+extends layout
+block content        
+        section.page.container   
+          style.
+            .danger {
+            background-color: #ffdddd;
+            border-left: 6px solid #f44336;
+            margin-bottom: 15px;
+            padding: 4px 12px;
+            }
+            .success {
+            background-color: #ddffdd;
+            border-left: 6px solid #4CAF50;
+            margin-bottom: 15px;
+            padding: 4px 12px;
+            }
+            .info {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            margin-bottom: 15px;
+            padding: 4px 12px;
+            }
+            .warning {
+            background-color: #ffffcc;
+            border-left: 6px solid #ffeb3b;
+            margin-bottom: 15px;
+            padding: 4px 12px;
+            }
+          .danger
+            p
+              strong Danger!
+              |  Some text...
+          .success
+            p
+              strong Success!
+              |  Some text...
+          .info
+            p
+              strong Info!
+              |  Some text...
+          .warning
+            p
+              strong Warning!
+              |  Some text...             
+          .row                 
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Registration
+                .box-content
+                  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js")
+                  script(src='/javascripts/app.js')
+                  |   
+                  body(ng-app='myApp')
+                    h2 Validation Example
+                    div
+                        form(ng-controller="myCtrl", name="myForm", novalidate="")
+                          p
+                            | Username:
+                            br
+                            input(type='text',name='author', ng-model='author',required="")
+                            span(style="color:red", ng-show="myForm.author.$dirty && myForm.author.$invalid")
+                              div.danger(ng-show="myForm.author.$error.required") Username is required.
+                          p
+                            | Email:
+                            br
+                            input(type="email", name="title", ng-model="title", required="")
+                            span(style="color:red", ng-show="myForm.title.$dirty && myForm.title.$invalid")
+                              span(ng-show="myForm.title.$error.required") Email is required.
+                              span(ng-show="myForm.title.$error.email") Invalid email address.
+                          p
+                            | Body:
+                            br
+                            input(type='text',name='body', ng-model='body',required="")
+                            span(style="color:red", ng-show="myForm.body.$dirty && myForm.body.$invalid")
+                              span(ng-show="myForm.body.$error.required") body is required.
+                          p
+                            input(type="submit", ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  \
+                            myForm.email.$dirty && myForm.email.$invalid", ng-click='submit()')
+                  .msgdiv
+                  br                 
+                //.box-footer
+                  button.btn.btn-primary(type='submit')
+                    i.icon-ok
+                    |                             Submit
+              br
+              |   
+              br
+              .msg1div
+
+              
+    

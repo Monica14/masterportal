@@ -1,0 +1,527 @@
+{"requestId":1,"level":"error","message":"Error when processing render request Error during rendering report: string.match is not a function TypeError: Error during rendering report: string.match is not a function\n    at module.exports (/home/monica/Desktop/HRSystem/node_modules/async-replace/async-replace.js:30:26)\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/util.js:16:23)\n    at ret (eval at <anonymous> (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/promisify.js:184:12), <anonymous>:13:39)\n    at evaluateAssets (/home/monica/Desktop/HRSystem/node_modules/jsreport-assets/lib/assets.js:66:10)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-assets/lib/assets.js:267:14\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T04:19:03.544Z"}
+{"requestId":1,"level":"error","message":"Error when processing render request Error during rendering report: Engine 'xlsx' not found Error: Error during rendering report: Engine 'xlsx' not found\n    at invokeRender (/home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:74:11)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:146:12\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T04:35:44.750Z"}
+{"requestId":2,"level":"error","message":"Error when processing render request Error during rendering report: Engine 'xlsx' not found Error: Error during rendering report: Engine 'xlsx' not found\n    at invokeRender (/home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:74:11)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:146:12\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T04:37:43.507Z"}
+{"requestId":3,"level":"error","message":"Error when processing render request Error during rendering report: Engine 'xlsx' not found Error: Error during rendering report: Engine 'xlsx' not found\n    at invokeRender (/home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:74:11)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:146:12\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T04:39:43.539Z"}
+{"requestId":1,"level":"error","message":"Error when processing render request Error during rendering report: string.match is not a function TypeError: Error during rendering report: string.match is not a function\n    at module.exports (/home/monica/Desktop/HRSystem/node_modules/async-replace/async-replace.js:30:26)\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/util.js:16:23)\n    at ret (eval at <anonymous> (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/promisify.js:184:12), <anonymous>:13:39)\n    at evaluateAssets (/home/monica/Desktop/HRSystem/node_modules/jsreport-assets/lib/assets.js:66:10)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-assets/lib/assets.js:267:14\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T06:10:00.873Z"}
+{"requestId":2,"level":"error","message":"Error when processing render request Error during rendering report: string.match is not a function TypeError: Error during rendering report: string.match is not a function\n    at module.exports (/home/monica/Desktop/HRSystem/node_modules/async-replace/async-replace.js:30:26)\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/util.js:16:23)\n    at ret (eval at <anonymous> (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/promisify.js:184:12), <anonymous>:13:39)\n    at evaluateAssets (/home/monica/Desktop/HRSystem/node_modules/jsreport-assets/lib/assets.js:66:10)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-assets/lib/assets.js:267:14\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T06:11:59.652Z"}
+{"requestId":1,"level":"error","message":"Error when processing render request Error during rendering report: Engine 'jade' not found Error: Error during rendering report: Engine 'jade' not found\n    at invokeRender (/home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:74:11)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:146:12\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T09:16:46.194Z"}
+{"requestId":2,"level":"error","message":"Error when processing render request Error during rendering report: Engine 'jade' not found Error: Error during rendering report: Engine 'jade' not found\n    at invokeRender (/home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:74:11)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:146:12\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T09:18:44.524Z"}
+{"requestId":1,"level":"error","message":"Error when processing render request Error during rendering report: Engine must be specified Error: Error during rendering report: Engine must be specified\n    at invokeRender (/home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:66:11)\n    at /home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/render/render.js:146:12\n    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)\n    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)\n    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)\n    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)\n    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)\n    at processImmediate [as _immediateCallback] (timers.js:383:17)","timestamp":"2017-09-06T10:36:51.977Z"}
+2017-10-03T06:34:56.068Z - error: Error when processing render request Error during rendering report: Cannot assign to read only property '$xlsxTemplate' of {
+  "people": [{
+    "name": "Jan Blaha",
+    "age": 31,
+    "gender": "male",
+    "city": "ghghghgjh",
+  }, {
+    "name": "Paule Noic",
+    "age": 24,
+    "gender": "female"
+  }, {
+    "name": "Trent Menzor",
+    "age": 51,
+    "gender": "male"
+  }, {
+    "name": "Gury Misneer",
+    "age": 72,
+    "gender": "male"
+  }, {
+    "name": "Linda Blend",
+    "age": 11,
+    "gender": "male"
+  }, {
+    "name": "Milan Novak",
+    "age": 9,
+    "gender": "male"
+  }, {
+    "name": "Peter Gabriel",
+    "age": 48,
+    "gender": "male"
+  }, {
+    "name": "Fidol Gutz",
+    "age": 15,
+    "gender": "male"
+  }, {
+    "name": "Katerina Miska",
+    "age": 69,
+    "gender": "female"
+  }]
+}
+ TypeError: Cannot assign to read only property '$xlsxTemplate' of {
+  "people": [{
+    "name": "Jan Blaha",
+    "age": 31,
+    "gender": "male",
+    "city": "ghghghgjh",
+  }, {
+    "name": "Paule Noic",
+    "age": 24,
+    "gender": "female"
+  }, {
+    "name": "Trent Menzor",
+    "age": 51,
+    "gender": "male"
+  }, {
+    "name": "Gury Misneer",
+    "age": 72,
+    "gender": "male"
+  }, {
+    "name": "Linda Blend",
+    "age": 11,
+    "gender": "male"
+  }, {
+    "name": "Milan Novak",
+    "age": 9,
+    "gender": "male"
+  }, {
+    "name": "Peter Gabriel",
+    "age": 48,
+    "gender": "male"
+  }, {
+    "name": "Fidol Gutz",
+    "age": 15,
+    "gender": "male"
+  }, {
+    "name": "Katerina Miska",
+    "age": 69,
+    "gender": "female"
+  }]
+}
+
+    at /home/monica/Desktop/HRSystem/node_modules/jsreport-xlsx/lib/index.js:151:30
+    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)
+    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)
+    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)
+    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)
+    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17) requestId=5
+2017-10-03T06:34:56.071Z - error: Error during processing request: http://localhost:5488/api/report/Population details: Error during rendering report: Cannot assign to read only property '$xlsxTemplate' of {
+  "people": [{
+    "name": "Jan Blaha",
+    "age": 31,
+    "gender": "male",
+    "city": "ghghghgjh",
+  }, {
+    "name": "Paule Noic",
+    "age": 24,
+    "gender": "female"
+  }, {
+    "name": "Trent Menzor",
+    "age": 51,
+    "gender": "male"
+  }, {
+    "name": "Gury Misneer",
+    "age": 72,
+    "gender": "male"
+  }, {
+    "name": "Linda Blend",
+    "age": 11,
+    "gender": "male"
+  }, {
+    "name": "Milan Novak",
+    "age": 9,
+    "gender": "male"
+  }, {
+    "name": "Peter Gabriel",
+    "age": 48,
+    "gender": "male"
+  }, {
+    "name": "Fidol Gutz",
+    "age": 15,
+    "gender": "male"
+  }, {
+    "name": "Katerina Miska",
+    "age": 69,
+    "gender": "female"
+  }]
+}
+ TypeError: Cannot assign to read only property '$xlsxTemplate' of {
+  "people": [{
+    "name": "Jan Blaha",
+    "age": 31,
+    "gender": "male",
+    "city": "ghghghgjh",
+  }, {
+    "name": "Paule Noic",
+    "age": 24,
+    "gender": "female"
+  }, {
+    "name": "Trent Menzor",
+    "age": 51,
+    "gender": "male"
+  }, {
+    "name": "Gury Misneer",
+    "age": 72,
+    "gender": "male"
+  }, {
+    "name": "Linda Blend",
+    "age": 11,
+    "gender": "male"
+  }, {
+    "name": "Milan Novak",
+    "age": 9,
+    "gender": "male"
+  }, {
+    "name": "Peter Gabriel",
+    "age": 48,
+    "gender": "male"
+  }, {
+    "name": "Fidol Gutz",
+    "age": 15,
+    "gender": "male"
+  }, {
+    "name": "Katerina Miska",
+    "age": 69,
+    "gender": "female"
+  }]
+}
+
+    at /home/monica/Desktop/HRSystem/node_modules/jsreport-xlsx/lib/index.js:151:30
+    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)
+    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)
+    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)
+    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)
+    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+2017-10-03T06:35:04.567Z - error: Error when processing render request Error during rendering report: Cannot assign to read only property '$xlsxTemplate' of {
+  "people": [{
+    "name": "Jan Blaha",
+    "age": 31,
+    "gender": "male",
+    "city": "ghghghgjh",
+  }, {
+    "name": "Paule Noic",
+    "age": 24,
+    "gender": "female"
+  }, {
+    "name": "Trent Menzor",
+    "age": 51,
+    "gender": "male"
+  }, {
+    "name": "Gury Misneer",
+    "age": 72,
+    "gender": "male"
+  }, {
+    "name": "Linda Blend",
+    "age": 11,
+    "gender": "male"
+  }, {
+    "name": "Milan Novak",
+    "age": 9,
+    "gender": "male"
+  }, {
+    "name": "Peter Gabriel",
+    "age": 48,
+    "gender": "male"
+  }, {
+    "name": "Fidol Gutz",
+    "age": 15,
+    "gender": "male"
+  }, {
+    "name": "Katerina Miska",
+    "age": 69,
+    "gender": "female"
+  }]
+}
+ TypeError: Cannot assign to read only property '$xlsxTemplate' of {
+  "people": [{
+    "name": "Jan Blaha",
+    "age": 31,
+    "gender": "male",
+    "city": "ghghghgjh",
+  }, {
+    "name": "Paule Noic",
+    "age": 24,
+    "gender": "female"
+  }, {
+    "name": "Trent Menzor",
+    "age": 51,
+    "gender": "male"
+  }, {
+    "name": "Gury Misneer",
+    "age": 72,
+    "gender": "male"
+  }, {
+    "name": "Linda Blend",
+    "age": 11,
+    "gender": "male"
+  }, {
+    "name": "Milan Novak",
+    "age": 9,
+    "gender": "male"
+  }, {
+    "name": "Peter Gabriel",
+    "age": 48,
+    "gender": "male"
+  }, {
+    "name": "Fidol Gutz",
+    "age": 15,
+    "gender": "male"
+  }, {
+    "name": "Katerina Miska",
+    "age": 69,
+    "gender": "female"
+  }]
+}
+
+    at /home/monica/Desktop/HRSystem/node_modules/jsreport-xlsx/lib/index.js:151:30
+    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)
+    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)
+    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)
+    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)
+    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17) requestId=6
+2017-10-03T06:35:04.570Z - error: Error during processing request: http://localhost:5488/api/report/Population details: Error during rendering report: Cannot assign to read only property '$xlsxTemplate' of {
+  "people": [{
+    "name": "Jan Blaha",
+    "age": 31,
+    "gender": "male",
+    "city": "ghghghgjh",
+  }, {
+    "name": "Paule Noic",
+    "age": 24,
+    "gender": "female"
+  }, {
+    "name": "Trent Menzor",
+    "age": 51,
+    "gender": "male"
+  }, {
+    "name": "Gury Misneer",
+    "age": 72,
+    "gender": "male"
+  }, {
+    "name": "Linda Blend",
+    "age": 11,
+    "gender": "male"
+  }, {
+    "name": "Milan Novak",
+    "age": 9,
+    "gender": "male"
+  }, {
+    "name": "Peter Gabriel",
+    "age": 48,
+    "gender": "male"
+  }, {
+    "name": "Fidol Gutz",
+    "age": 15,
+    "gender": "male"
+  }, {
+    "name": "Katerina Miska",
+    "age": 69,
+    "gender": "female"
+  }]
+}
+ TypeError: Cannot assign to read only property '$xlsxTemplate' of {
+  "people": [{
+    "name": "Jan Blaha",
+    "age": 31,
+    "gender": "male",
+    "city": "ghghghgjh",
+  }, {
+    "name": "Paule Noic",
+    "age": 24,
+    "gender": "female"
+  }, {
+    "name": "Trent Menzor",
+    "age": 51,
+    "gender": "male"
+  }, {
+    "name": "Gury Misneer",
+    "age": 72,
+    "gender": "male"
+  }, {
+    "name": "Linda Blend",
+    "age": 11,
+    "gender": "male"
+  }, {
+    "name": "Milan Novak",
+    "age": 9,
+    "gender": "male"
+  }, {
+    "name": "Peter Gabriel",
+    "age": 48,
+    "gender": "male"
+  }, {
+    "name": "Fidol Gutz",
+    "age": 15,
+    "gender": "male"
+  }, {
+    "name": "Katerina Miska",
+    "age": 69,
+    "gender": "female"
+  }]
+}
+
+    at /home/monica/Desktop/HRSystem/node_modules/jsreport-xlsx/lib/index.js:151:30
+    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:510:31)
+    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:567:18)
+    at Promise._settlePromise0 (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:612:10)
+    at Promise._settlePromises (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/promise.js:691:18)
+    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/listener-collection/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+2017-10-04T12:04:28.073Z - error: Error when loading extension Error: Cannot find module 'wkhtmltopdf-installer'
+Error: Cannot find module 'wkhtmltopdf-installer'
+    at Function.Module._resolveFilename (module.js:326:15)
+    at Function.Module._load (module.js:277:25)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/monica/Desktop/HRSystem/node_modules1/jsreport-wkhtmltopdf/lib/wkhtmltopdf.js:13:19)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at /home/monica/Desktop/HRSystem/node_modules/jsreport-core/lib/extensions/extensionsManager.js:122:16
+    at tryCatcher (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromiseCtx (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/promise.js:606:10)
+    at Async._drainQueue (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/async.js:138:12)
+    at Async._drainQueues (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/HRSystem/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+2017-10-08T13:55:51.039Z - error: Error when loading extension Error: Cannot find module 'wkhtmltopdf-installer'
+Error: Cannot find module 'wkhtmltopdf-installer'
+    at Function.Module._resolveFilename (module.js:326:15)
+    at Function.Module._load (module.js:277:25)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/monica/Desktop/Masterportal/node_modules1/jsreport-wkhtmltopdf/lib/wkhtmltopdf.js:13:19)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at /home/monica/Desktop/Masterportal/node_modules/jsreport-core/lib/extensions/extensionsManager.js:122:16
+    at tryCatcher (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromiseCtx (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:606:10)
+    at Async._drainQueue (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:138:12)
+    at Async._drainQueues (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+2017-10-09T05:43:50.643Z - error: Error when loading extension Error: Cannot find module 'wkhtmltopdf-installer'
+Error: Cannot find module 'wkhtmltopdf-installer'
+    at Function.Module._resolveFilename (module.js:326:15)
+    at Function.Module._load (module.js:277:25)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/monica/Desktop/Masterportal/node_modules1/jsreport-wkhtmltopdf/lib/wkhtmltopdf.js:13:19)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at /home/monica/Desktop/Masterportal/node_modules/jsreport-core/lib/extensions/extensionsManager.js:122:16
+    at tryCatcher (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromiseCtx (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:606:10)
+    at Async._drainQueue (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:138:12)
+    at Async._drainQueues (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+2017-10-24T11:41:58.665Z - error: Error when loading extension Error: Cannot find module 'wkhtmltopdf-installer'
+Error: Cannot find module 'wkhtmltopdf-installer'
+    at Function.Module._resolveFilename (module.js:326:15)
+    at Function.Module._load (module.js:277:25)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/monica/Desktop/Masterportal/node_modules1/jsreport-wkhtmltopdf/lib/wkhtmltopdf.js:13:19)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at /home/monica/Desktop/Masterportal/node_modules/jsreport-core/lib/extensions/extensionsManager.js:122:16
+    at tryCatcher (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromiseCtx (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:606:10)
+    at Async._drainQueue (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:138:12)
+    at Async._drainQueues (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+2017-10-26T06:42:35.888Z - error: Error when loading extension Error: Cannot find module 'wkhtmltopdf-installer'
+Error: Cannot find module 'wkhtmltopdf-installer'
+    at Function.Module._resolveFilename (module.js:326:15)
+    at Function.Module._load (module.js:277:25)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/home/monica/Desktop/Masterportal/node_modules1/jsreport-wkhtmltopdf/lib/wkhtmltopdf.js:13:19)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at /home/monica/Desktop/Masterportal/node_modules/jsreport-core/lib/extensions/extensionsManager.js:122:16
+    at tryCatcher (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromiseCtx (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/promise.js:606:10)
+    at Async._drainQueue (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:138:12)
+    at Async._drainQueues (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/monica/Desktop/Masterportal/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+2017-10-26T10:11:44.037Z - error: Error when processing render request Error during rendering report: each doesn't match xlsxAdd - 1:75 Error: each doesn't match xlsxAdd - 1:75
+    at validateClose (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:28:11)
+    at Object.prepareBlock (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:144:5)
+    at Object.anonymous (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:65:33)
+    at Object.parse (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:367:48)
+    at HandlebarsEnvironment.parse (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:46:43)
+    at compileInput (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:514:19)
+    at ret (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:523:18)
+    at /home/monica/Desktop/Masterportal/node_modules/jsreport-handlebars/lib/handlebarsEngine.js:25:14
+    at evalmachine.<anonymous>:1:41
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15) requestId=24
+2017-10-26T10:11:44.040Z - error: Error during processing request: http://localhost:5488/api/report details: Error during rendering report: each doesn't match xlsxAdd - 1:75 Error: each doesn't match xlsxAdd - 1:75
+    at validateClose (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:28:11)
+    at Object.prepareBlock (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:144:5)
+    at Object.anonymous (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:65:33)
+    at Object.parse (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:367:48)
+    at HandlebarsEnvironment.parse (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:46:43)
+    at compileInput (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:514:19)
+    at ret (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:523:18)
+    at /home/monica/Desktop/Masterportal/node_modules/jsreport-handlebars/lib/handlebarsEngine.js:25:14
+    at evalmachine.<anonymous>:1:41
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+2017-10-26T10:14:27.912Z - error: Error when processing render request Error during rendering report: Cannot read property 'row' of undefined TypeError: Cannot read property 'row' of undefined
+    at eval (eval at evalGet (evalmachine.<anonymous>:86:12), <anonymous>:3:34)
+    at evalGet (evalmachine.<anonymous>:86:35)
+    at Object.remove (evalmachine.<anonymous>:119:22)
+    at Object.<anonymous> (evalmachine.<anonymous>:406:17)
+    at Object.eval (eval at createFunctionContext (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:254:23), <anonymous>:6:78)
+    at main (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/runtime.js:173:32)
+    at ret (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/runtime.js:176:12)
+    at ret (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:525:21)
+    at /home/monica/Desktop/Masterportal/node_modules/jsreport-handlebars/lib/handlebarsEngine.js:25:14
+    at evalmachine.<anonymous>:1:41 requestId=27
+2017-10-26T10:14:27.914Z - error: Error during processing request: http://localhost:5488/api/report details: Error during rendering report: Cannot read property 'row' of undefined TypeError: Cannot read property 'row' of undefined
+    at eval (eval at evalGet (evalmachine.<anonymous>:86:12), <anonymous>:3:34)
+    at evalGet (evalmachine.<anonymous>:86:35)
+    at Object.remove (evalmachine.<anonymous>:119:22)
+    at Object.<anonymous> (evalmachine.<anonymous>:406:17)
+    at Object.eval (eval at createFunctionContext (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:254:23), <anonymous>:6:78)
+    at main (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/runtime.js:173:32)
+    at ret (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/runtime.js:176:12)
+    at ret (/home/monica/Desktop/Masterportal/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:525:21)
+    at /home/monica/Desktop/Masterportal/node_modules/jsreport-handlebars/lib/handlebarsEngine.js:25:14
+    at evalmachine.<anonymous>:1:41

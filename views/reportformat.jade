@@ -1,0 +1,72 @@
+extends layout1
+block content        
+        section.page.container          
+          .row
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Registration
+                .box-content
+                  form(id='register_form')
+                    table.table
+                      thead.thead-default
+                        tr                    
+                          th Field
+                          th Type
+                      tbody
+                        tr
+                          th(scope='row') Report Name
+                          td 
+                            input(type='text' ng-model="report_name")
+                        tr
+                          th(scope='row') Database Names
+                          td 
+                            select(ng-model="dbname")
+                              option(ng-repeat="dbdata in databsenames",ng-model="db") {{ dbdata.Database }}
+                        tr
+                          th(scope='row') Table Names 
+                          td 
+                            select(ng-model='tablename')
+                              option(ng-repeat="dbdata in tablenames",ng-model="tablenames") {{ dbdata.TABLE_NAME }}
+                        tr(class="colvalues")
+                          th(scope='row') Column Names
+                          td 
+                            select
+                              option(ng-repeat="{{coldata}}",ng-model="tablenames1") {{ dbdata.COLUMN_NAME }}  
+                                           
+                        tr
+                          th(scope='row')
+                          td(colspan=3)
+                            //input(type='checkbox',value="sadasdsadasd" class="colcheckval")          
+                            input(type='button', value='Generate Report' ng-click="showSelectedValues()")
+                            input(type='button', value='Get Columns' ng-click="getcol()")
+                            script(src='js/jsreport.min.js', type='text/javascript')
+                            script(src='js/jsreport.js', type='text/javascript')
+                            input(type='button', title='test', ng-click='generateReport();', value='Get PDF Report')
+                            #placeholder
+                              
+
+                  .msgdiv
+                  table.table
+                    thead.thead-default
+                      //tr                    
+                        th Field {{ columnname }}
+                        th Action
+                    tbody
+                      //tr(ng-repeat="columndata in reportdata")
+                        th(scope='row') {{ columndata.report_name }}
+                        td 
+                          input(type='button',ng-click="getreport($event)",value="Report",id="{{ columndata.report_name }}")
+
+                          input(type='button', title='test', ng-click='generateReport();', value='Get PDF Report')
+                          #placeholder(style='height:900px;')
+                            td 
+                              input(type='text',ng-click="getreport($event)",value="Report",id="{{ columndata.report_name }}")
+
+                              input(type='text', title='test', ng-click='generateReport();', value='Get PDF Report')
+                          
+                  
+                  .msgdiv1
+
+
+              

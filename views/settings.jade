@@ -1,0 +1,143 @@
+extends layout1
+block content
+    .content-wrapper.py-3
+      .container-fluid
+        // Breadcrumbs
+        //ol.breadcrumb
+          li.breadcrumb-item
+            a(href='#') Dashboard
+          li.breadcrumb-item.active #{ title } 
+        // Icon Cards      
+        // Area Chart Example
+        .card.mb-3(style="margin-top: 40px;")
+          .card-header
+            i.fa.fa-area-chart
+            |  Dates Settings
+          .card-block(style="margin-top: 13px;")
+            
+              table.table.table-bordered
+                thead
+                  tr
+                    th State
+                    th From
+                    th To
+                    th New
+                    th Existing
+                    
+                tbody
+                  tr
+                    td Setgoal
+                    td
+                      input(type="date" ng-model="setgoal_from" value="{{setgoal_from}}")
+                    td
+                      input(type="date" ng-model="setgoal_to" value="{{setgoal_to}}")
+                      input(type="hidden" ng-model="settings_tablename" value="{{settings_tablename}}")
+                      input(type="hidden" ng-model="databasename" value="unipart")
+                    td                      
+                      input(type="button" ng-click="savedata(setgoal_settings,'save','settings')" value="Save" class="btn savedata")
+                    td
+                      input(type="hidden" value="{{'setgoal_from,setgoal_to,settings_tablename,databasename'}}" ng-model="setgoal_settings")
+                      input(type="hidden" value="{{'setgoal_from,setgoal_to,key_id,settings_tablename,databasename'}}" ng-model="setgoal_settings1")
+                      input(type="checkbox" ng-click="editdata(setgoal_settings1,'settings','unipart')" value="Edit" class="btn savedata editset" ng-model="editset")  
+                      |  Really Want to edit this Information?  
+                      br
+                      br
+                      input(type="button" ng-click="savedata(setgoal_settings,'update','settings')" value="Update" class="btn savedata updatebtn" style="display: none;")
+                      
+                  tr
+                    td Midyear
+                    td
+                      input(type="date" ng-model="midyear_from" value="{{midyear_from}}")
+                    td
+                      input(type="date" ng-model="midyear_to" value="{{midyear_to}}")
+                      input(type="hidden" ng-model="key_id" value="{{key_id}}")                     
+                    td                      
+                      input(type="button" ng-click="savedata(midgoal_settings,'save','settings')" value="Save" class="btn savedata")
+                    td
+                      input(type="hidden" value="{{'midyear_from,midyear_to,settings_tablename,databasename'}}" ng-model="midgoal_settings")
+                      input(type="hidden" value="{{'midyear_from,midyear_to,key_id,settings_tablename,databasename'}}" ng-model="midgoal_settings1")
+                      input(type="checkbox" ng-click="editdata(midgoal_settings1,'settings','unipart')" value="Edit" class="btn savedata editset" ng-model="editset_mid")  
+                      |  Really Want to edit this Information?  
+                      br
+                      br
+                      input(type="button" ng-click="savedata(midgoal_settings,'update','settings')" value="Update" class="btn savedata updatebtn1" style="display: none;")
+                  tr
+                    td Year End
+                    td
+                      input(type="date" ng-model="yearend_from")
+                    td
+                      input(type="date" ng-model="yearend_to")                    
+                    td                      
+                      input(type="button" ng-click="savedata('yearend_from,yearend_to,settings_tablename,databasename','save','settings')" value="Save" class="btn savedata")
+                    td
+                      input(type="hidden" value="{{'yearend_from,yearend_to,settings_tablename,databasename'}}" ng-model="yearend_settings")
+                      input(type="hidden" value="{{'yearend_from,yearend_to,key_id,settings_tablename,databasename'}}" ng-model="yearend_settings1")
+                      input(type="checkbox" ng-click="editdata(yearend_settings1,'settings','unipart')" value="Edit" class="btn savedata editset" ng-model="editset_yearend")  
+                      |  Really Want to edit this Information?  
+                      br
+                      br
+                      input(type="button" ng-click="savedata(yearend_settings,'update','settings')" value="Update" class="btn savedata updatebtn2" style="display: none;")
+                  //tr
+                    td Record
+                    td
+                      
+                    td
+                                         
+                    td  
+                      input(type="text" ng-model="where_chk" value="{{'where key_id = `'+key_id+'`'}}")                    
+                      input(type="text" ng-model="key_value" value="{{'14'}}")                  
+                    td                      
+                      input(type="button" ng-click="deleterecord({{where_chk}},'settings','')" value="Delete" class="btn savedata updatebtn2")
+                    
+                      
+              
+                  
+          .card-footer.small.text-muted
+        
+          .card-footer.small.text-muted
+        .card.mb-3(style="margin-top: 40px;")
+          .card-header
+            i.fa.fa-area-chart
+            |  KRA Settings
+          .card-block(style="margin-top: 13px;")
+            form(action='/savedatabase', method='POST')
+              table.table.table-bordered
+                thead
+                  tr
+                    th Type
+                    th Min Number Allowed 
+                    th Max Number Allowed
+                    th Action
+                tbody
+                  tr
+                    td KRA
+                    td
+                      input(type="text" ng-model="minkra")
+                    td
+                      input(type="text" ng-model="maxkra")
+                    td
+                      input(type="button" ng-model="savedate2" value="Save" class="btn")
+                  
+                    
+                      
+              
+                  
+          .card-footer.small.text-muted
+        
+          .card-footer.small.text-muted
+      // /.container-fluid
+    // /.content-wrapper
+    
+    script(type='text/javascript').
+      $(function(){
+      // alert("hgjhgh");
+      });
+    style.
+      #database_list_wrapper
+      {
+        margin-left: 33px;
+      }
+
+
+
+    

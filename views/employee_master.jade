@@ -1,0 +1,287 @@
+extends layout
+block content    
+    
+    script(type="text/javascript").
+      $(document).ready(function(){
+      $("#myTab a").click(function(e){
+      e.preventDefault();
+      $(this).tab('show');
+      });
+      $('.btnNext').click(function(){
+        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+      });
+
+        $('.btnPrevious').click(function(){
+        $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+      });
+      });
+    style(type="text/css").
+      .bs-example{
+      margin: 20px;
+      }
+    section.page.container          
+          .row
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Employee Data
+                .box-content
+                  
+                  
+                  .bs-example
+                    ul#myTab.nav.nav-tabs
+                      - var cnt = 0
+                      - each item in tablecontent
+                        if cnt == 0
+                          li.active
+                            a(href="#section#{ cnt }") #{ item.tab_name }
+                        else
+                          li
+                            a(href="#section#{ cnt }") #{ item.tab_name }
+                        --  cnt++ 
+                    |     
+                    .tab-content
+                      
+                      - var cnt = 0
+                      - var last = 0
+                      - var ab = 0
+                      - var count11 = 0
+                      - each item in tablecontent
+                        if cnt == 0
+                          div(id="section#{cnt}" class="tab-pane fade active in")
+                            h3 #{ item.tab_name }
+                            |             
+                            table.table.table-bordered                              
+                              tbody
+                              - each field in field_content  
+                                | 
+                                - var tab_name = field.tab_name
+                                - var tab_name1 = tablecontent[cnt].tab_name
+                                if tab_name == tab_name1  
+                                  tr                                  
+                                    td
+                                      - var str = field.field_extra_info
+                                      - var tags = str.split(',')                                    
+                                      - var count = 0
+                                      - each field1 in tags
+                                          if field.field_type == 'textarea'                                           
+                                              |   #{ field.field_name } 
+                                              
+                                            else if count == 0
+                                              - var tags1 = tags[0].split('@')         
+                                              |   #{ field.field_name }  
+                                              
+                                            
+                                            - count++
+                                    td 
+                                      - var str2 = field.validate
+                                      - var tags2 = str2.split(',')
+                                      - var str = field.field_extra_info
+                                      - var tags = str.split(',')   
+                                      - var str3 = field.error_message
+                                      - var tags3 = str3.split(',')
+                                      - var str4 = field.namefield
+                                      - var tags4 = str4.split(',')                                 
+                                      - var count = 0
+                                      
+                                      - cnt = 0   
+                                      - var ab = 0
+                                      - each field1 in tags
+                                          if field.field_type == 'textarea'                                           
+                                              form(name="form#{tags4[count]}")   
+                                                textarea(type='#{field.field_type}' name='#{tags4[count]}' ng-model='#{tags4[count]}' ng-pattern='#{tags2[count]}')
+                                                span(ng-show='form#{tags4[count]}.#{tags4[count]}.$error.pattern')  #{tags3[count]}
+                                            else if field.field_type == 'dropdown'  
+                                              - var tags1 = tags[0].split('@')
+                                                select
+                                                  - for(var i=0;i<tags.length;i++)
+                                                      if i==0
+                                                        option=tags1[1]
+                                                      else
+                                                        option=tags[i]                                   
+                                              - break
+                                             
+                                            else
+                                              - var tags1 = tags[0].split('@')
+                                                if tags1[0] > 1
+
+                                                  - each field11 in tags4
+                                                    if ab == 0
+                                                      form(name="form#{tags1[1]}") 
+                                                        input(type='#{field.field_type}' name='#{tags1[1]}' ng-model='#{tags1[1]}' ng-pattern='#{tags2[count]}' placeholder="#{tags1[1]}")
+                                                        span(ng-show='form#{tags1[1]}.#{tags1[1]}.$error.pattern') #{tags3[count]}
+                                                    else
+                                                      
+                                                      if ab == 1
+                                                        - var left = 239
+                                                        - top = -52
+                                                      else
+                                                        - var left = 239+236
+                                                        - top = -52
+                                                      form(name="form#{tags[ab]}") 
+                                                        input(type='#{field.field_type}' style="margin-top:#{top}px;margin-left: #{left}px;position:absolute" name='#{tags[ab]}'  ng-pattern='#{tags2[count]}' placeholder="#{tags[ab]}")
+                                                        span(ng-show='form#{tags[ab]}.#{tags[ab]}.$error.pattern')  #{tags3[count]}
+                                                    - ab++
+                                                  
+                                                else 
+                                                  form(name="form#{tags1[1]}") 
+                                                    input(type='#{field.field_type}' name='#{tags1[1]}' ng-model='pqr#{count11}' ng-pattern='#{tags2[count]}' placeholder="#{tags1[1]}")
+                                                    span(ng-show='form#{tags1[1]}.#{tags1[1]}.$error.pattern')    #{tags3[count]}                                                
+                                              - count11++    
+                                            - count++
+                            a.btn.btn-primary.btnNext(style="float: right;") Next
+                        else if(last+1<tablecontent.length) 
+                          div(id="section#{cnt}" class="tab-pane fade in")
+                            h3  #{ item.tab_name }
+                            |             
+                            table.table.table-bordered                              
+                              tbody
+                              - each field in field_content  
+                                - var tab_name = field.tab_name
+                                - var tab_name1 = tablecontent[cnt].tab_name
+                                if tab_name == tab_name1  && field.field_type != ""
+                                  tr                                    
+                                    td 
+                                      - var str = field.field_extra_info
+                                      - var tags = str.split(',')                                    
+                                      - var count = 0
+                                      - each field1 in tags
+                                          if field.field_type == 'textarea'                                           
+                                              |   #{ field.field_name } 
+                                              
+                                            else if count == 0
+                                              - var tags1 = tags[0].split('@')         
+                                              |   #{ field.field_name }  
+                                              
+                                            
+                                            - count++
+                                    td 
+                                      - var str = field.field_extra_info
+                                      - var tags = str.split(',')    
+                                      - var str2 = field.validate
+                                      - var tags2 = str2.split(',')
+                                      - var str3 = field.error_message
+                                      - var tags3 = str3.split(',')
+                                      - var str4 = field.namefield
+                                      - var tags4 = str4.split(',')                                
+                                      - var count = 0
+                                      - var ab = 0
+                                      - each field1 in tags
+                                          if field.field_type == 'textarea'                                           
+                                              form(name="form#{tags4[count]}")   
+                                                textarea(type='#{field.field_type}' name='#{tags4[count]}' ng-model='#{tags4[count]}' ng-pattern='#{tags2[count]}')
+                                                span(ng-show='form#{tags4[count]}.#{tags4[count]}.$error.pattern') #{tags3[count]}
+                                            else if field.field_type == 'dropdown'  
+                                              - var tags1 = tags[0].split('@')
+                                                select
+                                                  - for(var i=0;i<tags.length;i++)
+                                                      if i==0
+                                                        option=tags1[1]
+                                                      else
+                                                        option=tags[i]                                   
+                                              - break
+                                             
+                                            else
+                                              - var tags1 = tags[0].split('@')
+                                                if tags1[0] > 1
+
+                                                  - each field11 in tags4
+                                                    if ab == 0
+                                                      form(name="form#{tags1[1]}") 
+                                                        input(type='#{field.field_type}' name='#{tags1[1]}' ng-model='#{tags1[1]}' ng-pattern='#{tags2[count]}' placeholder="#{tags1[1]}")
+                                                        span(ng-show='form#{tags1[1]}.#{tags1[1]}.$error.pattern')  #{tags3[count]}
+                                                    else
+                                                      form(name="form#{tags[ab]}") 
+                                                        input(type='#{field.field_type}' name='#{tags[ab]}'  ng-pattern='#{tags2[count]}' placeholder="#{tags[ab]}")
+                                                        span(ng-show='form#{tags[ab]}.#{tags[ab]}.$error.pattern')  #{tags3[count]}
+                                                    - ab++
+                                                  
+                                                else 
+                                                  form(name="form#{tags1[1]}") 
+                                                    input(type='#{field.field_type}' name='#{tags1[1]}' ng-model='pqr#{count11}' ng-pattern='#{tags2[count]}' placeholder="#{tags1[1]}")
+                                                    span(ng-show='form#{tags1[1]}.#{tags1[1]}.$error.pattern')    #{tags3[count]}                
+                                              - count11++    
+                                            - count++
+                            a.btn.btn-primary.btnNext(style="float: right;") Next
+                            |         
+                            a.btn.btn-primary.btnPrevious Previous
+                        else
+                          div(id="section#{cnt}" class="tab-pane fade in")
+                            h3 #{ item.tab_name }
+                            |             
+                            table.table.table-bordered                              
+                              tbody
+                              - each field in field_content  
+                                
+                                - var tab_name = field.tab_name
+                                - var tab_name1 = tablecontent[cnt].tab_name
+                                if tab_name == tab_name1  
+                                  tr                                  
+                                    td 
+                                      - var str = field.field_extra_info
+                                      - var tags = str.split(',')                                    
+                                      - var count = 0
+                                      - each field1 in tags
+                                          if field.field_type == 'textarea'                                           
+                                              |   #{ field.field_name } 
+                                              
+                                            else if count == 0
+                                              - var tags1 = tags[0].split('@')         
+                                              |   #{ field.field_name }  
+                                              
+                                            
+                                            - count++
+                                    td 
+                                      - var str = field.field_extra_info
+                                      - var tags = str.split(',')                                         
+                                      - var str2 = field.validate
+                                      - var tags2 = str2.split(',')
+                                      - var str3 = field.error_message
+                                      - var tags3 = str3.split(',')
+                                      - var str4 = field.namefield
+                                      - var tags4 = str4.split(',')
+                                      - var count = 0
+                                      - var ab = 0
+                                      - each field1 in tags
+                                          if field.field_type == 'textarea'                                           
+                                              form(name="form#{tags4[count]}")   
+                                                textarea(type='#{field.field_type}' name='#{tags4[count]}' ng-model='#{tags4[count]}' ng-pattern='#{tags2[count]}')
+                                                span(ng-show='form#{tags4[count]}.#{tags4[count]}.$error.pattern')  #{tags3[count]}
+                                            else if field.field_type == 'dropdown'  
+                                              - var tags1 = tags[0].split('@')
+                                                select
+                                                  - for(var i=0;i<tags.length;i++)
+                                                      if i==0
+                                                        option=tags1[1]
+                                                      else
+                                                        option=tags[i]                                   
+                                              - break
+                                             
+                                            else
+                                              - var tags1 = tags[0].split('@')
+                                                if tags1[0] > 1
+
+                                                  - each field11 in tags4
+                                                    if ab == 0
+                                                      form(name="form#{tags1[1]}") 
+                                                        input(type='#{field.field_type}' name='#{tags1[1]}' ng-model='#{tags1[1]}' ng-pattern='#{tags2[count]}' placeholder="#{tags1[1]}")
+                                                        span(ng-show='form#{tags1[1]}.#{tags1[1]}.$error.pattern') #{tags3[count]}
+                                                    else
+                                                      form(name="form#{tags[ab]}") 
+                                                        input(type='#{field.field_type}' name='#{tags[ab]}'  ng-pattern='#{tags2[count]}' placeholder="#{tags[ab]}")
+                                                        span(ng-show='form#{tags[ab]}.#{tags[ab]}.$error.pattern')  #{tags3[count]}
+                                                    - ab++
+                                                  
+                                                else 
+                                                  form(name="form#{tags1[1]}") 
+                                                    input(type='#{field.field_type}' name='#{tags1[1]}' ng-model='pqr#{count11}' ng-pattern='#{tags2[count]}' placeholder="#{tags1[1]}")
+                                                    span(ng-show='form#{tags1[1]}.#{tags1[1]}.$error.pattern')    #{tags3[count]}                
+                                              - count11++    
+                                            - count++
+                            a.btn.btn-primary.btnNext(style="float: right;") Save
+                            |         
+                            a.btn.btn-primary.btnPrevious Previous
+                        --  last++
+                        --  cnt++  
+                            
+

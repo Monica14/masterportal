@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app='myApp'>
+  <head>
+    <title>My AngularJS App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  </head>
+  <body>
+<form action="/saverecord" method="POST">
+  <input type="text" placeholder="Fieldname" name="fieldname">
+  <input type="text" placeholder="Fieldtype" name="fieldtype">
+  <input type="text" placeholder="Tabname" name="tabname">
+  <button type="submit">Save</button>
+</form>
+  <div ng-controller="MyCtrl">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <p>Name</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in data">
+          <td> 
+            <p>{{user.fname}}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+    <script>
+     var myApp = angular.module('myApp',[]);
+     function MyCtrl($scope, $http) {
+     //This method will call your server, with the GET method and the url /show
+     $http.get("http://localhost:3000/form").then(function(success){
+      if(success.data.length>0)
+      {
+        alert(success);
+         $scope.users=success.data;
+      }
+     });
+     }
+   </script>
+  </body>
+ </html>

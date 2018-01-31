@@ -1,0 +1,61 @@
+extends layout
+block content    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(type="text/javascript").
+      $(document).ready(function(){
+      $("#myTab a").click(function(e){
+      e.preventDefault();
+      $(this).tab('show');
+      });
+      $('.btnNext').click(function(){
+        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+      });
+
+        $('.btnPrevious').click(function(){
+        $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+      });
+      });
+    style(type="text/css").
+      .bs-example{
+      margin: 20px;
+      }
+    section.page.container          
+          .row
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Employee Report
+                .box-content
+                  table.table
+                      thead.thead-default
+                        tr                    
+                          th Field
+                          th Type
+                      tbody
+                        tr
+                          th(scope='row') User Name
+                          td 
+                            input(type='text', name='fname')
+                        tr
+                          th(scope='row') Module Name
+                          td 
+                            select
+                              option  HRIS 
+                              option  Reimbersment 
+                              option  Taxation
+                        tr
+                          th(scope='row') Access Types
+                          td 
+                            input(type='checkbox', value='read')
+                            |  Read  
+                            input(type='checkbox', value='write')
+                            |  Write  
+                            input(type='checkbox', value='View')
+                            |  View   
+                        tr
+                          th(scope='row')
+                          td(colspan=3)
+                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            br              
+                            input.register_btn.btn.btn-primary(type='button', value='Submit' id="check")

@@ -1,0 +1,139 @@
+var express = require('express');
+var router = express.Router();
+var mysql = require('mysql');
+// var base_url = window.location.origin;
+
+con = mysql.createConnection({
+	     host: "localhost",
+	     user: "root",
+	     password: "p@$$w0Rd1",
+	     database: 'node'
+});
+
+// var ajax = function(data,url)
+// {
+// 	$.ajax({
+//     		type : 'post',
+//             dataType: 'json',
+//             data : data,
+//     		url: base_url+url,
+//             success : function(data)
+//             {
+//                 alert(data);
+//             }
+//     	});
+// }
+
+var insert = function(table,data,callback)
+{
+	//console.log(table);
+	//console.log(data);
+	str = "insert into "+table+" (";
+	for(ans in data){
+		str+= ans + ","
+	}
+	finalstr= str.slice(0,-1);
+	finalstr+=")";
+
+	finalstr+=" values ('";
+	for(ans in data){
+		finalstr+= data[ans] + "','"
+	}
+	finalstr1= finalstr.slice(0,-2);
+	finalstr1+=")";
+	
+
+	con.query(finalstr1, function (err,     result) {
+   	if(err){
+   		callback(err,null);
+		
+   	}
+
+   	else{
+   		callback(null,result);
+   	}
+    });
+}
+
+var select = function(table,where,callback)
+{
+	//console.log("dsfdsf");
+	//console.log(data);
+	query = "select * from "+table+" "+where;
+	
+	con.query(query, function (err,     result) {
+   	if(err){
+   		callback(err,null);
+		
+   	}
+
+   	else{
+   		callback(null,result);
+   	}
+    });
+}
+
+var selectdist = function(table,where,dist,callback)
+{
+	// console.log("dsfdsf");
+	// console.log(data);
+	query = "select distinct "+dist+" from "+table+" "+where;
+	//console.log(query);
+	con.query(query, function (err,     result) {
+   	if(err){
+   		callback(err,null);
+		
+   	}
+
+   	else{
+   		callback(null,result);
+   	}
+    });
+}
+
+var update = function(table,setval,where,callback)
+{
+	//console.log(table);	
+	str = "update `"+table+"` set ";
+	console.log(setval);
+	for(ans in setval)
+	{		
+		str += ans+'= "'+setval[ans]+'" ,'
+	}
+	str = str.slice(0,-1);
+	str = str+' '+where;
+	console.log(str);
+	con.query(str, function (err,     result) {
+   	if(err){
+   		callback(err,null);
+		
+   	}
+   	else{
+   		callback(null,result);
+   	}
+    });
+}
+
+var deleterecord = function(table,setval,where,callback)
+{
+	str = "delete from `"+table+"` "+where;	
+	console.log(str);
+	con.query(str, function (err,     result) {
+   	if(err){
+   		callback(err,null);
+		
+   	}
+   	else{
+   		callback(null,result);
+   	}
+    });
+}
+
+
+module.exports = {
+	insert : insert,
+	update : update,
+	deleterecord : deleterecord,
+	select : select,
+	selectdist : selectdist
+}

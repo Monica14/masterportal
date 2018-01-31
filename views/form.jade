@@ -1,0 +1,123 @@
+extends layout1
+block content
+    .content-wrapper.py-3
+      .container-fluid
+        // Breadcrumbs
+        //ol.breadcrumb
+          li.breadcrumb-item
+            a(href='#') Dashboard
+          li.breadcrumb-item.active #{ title } 
+        // Icon Cards      
+        // Area Chart Example
+        .card.mb-3
+          .card-header
+            i.fa.fa-area-chart
+            |  Create Database
+          .card-block 
+            form(action='/savedatabase', method='POST')
+              table.table.table-bordered
+                thead
+                  tr
+                    th Database Name
+                    th Select
+                tbody
+                  tr
+                    td
+                      input(type='text', placeholder='dbname', ng-model='databsename')
+                    td
+                      button(type='button', style='float: right;',ng-click="savedatabase()") Save
+              table.table.table-bordered(id="database_list")
+                thead
+                  tr
+                    th Sr.No
+                    th Database Name
+                    th Action
+                tbody
+                  - var cnt = 1;
+                  - each item in data
+                    tr
+                      td=cnt
+                      td=item.Database
+                      td 
+                        button(type='button', style='float: right;',id=item.Database,class="delete_db") Delete                    
+                      - cnt++;
+          .card-footer.small.text-muted
+        .card.mb-3
+          .card-header
+            i.fa.fa-area-chart
+            |  Create Table
+          .card-block
+            form(action='/savetable', method='POST')
+              table.table.table-bordered.table-responsive
+                thead
+                  tr
+                    th Database Name
+                    th Table Name
+                    th Column Number
+                    th Column Name
+                    th Column Type
+                    th Action
+                tbody
+                  tr
+                    td
+                      input(type='text', placeholder='dbname', ng-model='dbname_table')
+                    td
+                      input(type='text', placeholder='tablename', ng-model='create_tablename')
+                    td
+                      input(type='text', placeholder='Column Number (Note : ; separated)', ng-model='table_colnumber')
+                    td
+                      input(type='text', placeholder='Column Name', ng-model='table_colname')
+                    td
+                      input(type='text', placeholder='Column Type', ng-model='table_coltype')
+                    td
+                      button(type='button', style='float: right;',ng-click="savetable()") Save
+          .card-footer.small.text-muted
+        .card.mb-3
+          .card-header
+            i.fa.fa-area-chart
+            |  Update Column
+          .card-block
+            form(action='/savercolumn', method='POST')
+              table.table.table-bordered.table-responsive
+                thead
+                  tr
+                    th Database Name
+                    th Table Name
+                    th Field Name
+                    th Field Type
+                    th Any Tab
+                tbody
+                  tr
+                    td
+                      input(type='text', placeholder='dbname', name='dbname')
+                    td
+                      input(type='text', placeholder='tablename', name='tablename')
+                    td
+                      input(type='text', placeholder='Column Number (Note : ; separated)', name='colnumber')
+                    td
+                      input(type='text', placeholder='Column Name', name='colname')
+                    td
+                      input(type='text', placeholder='Column Type', name='coltype')
+                    td
+                      button(type='submit', style='float: right;') Save
+                  tr
+                    td(colspan='3')
+                      button(type='submit', style='float: right;') Save
+          .card-footer.small.text-muted
+      // /.container-fluid
+    // /.content-wrapper
+    a.scroll-to-top.rounded(href='#page-top')
+      i.fa.fa-chevron-up
+    script(type='text/javascript').
+      $(function(){
+      // alert("hgjhgh");
+      });
+    style.
+      #database_list_wrapper
+      {
+        margin-left: 33px;
+      }
+
+
+
+    

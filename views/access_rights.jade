@@ -1,0 +1,80 @@
+extends layout1
+block content        
+        section.page.container          
+          .row
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Registration
+                .box-content
+                  form(id='register_form')
+                    table.table
+                      thead.thead-default
+                        tr                    
+                          th Field
+                          th Type
+                      tbody
+                        tr
+                          th(scope='row') User Name
+                          td 
+                            input(type='text', name='fname')
+                        tr
+                          th(scope='row') Module Name
+                          td 
+                            select
+                              option  HRIS 
+                              option  Reimbersment 
+                              option  Taxation
+                        tr
+                          th(scope='row') Access Types
+                          td 
+                            input(type='checkbox', value='read')
+                            |  Read  
+                            input(type='checkbox', value='write')
+                            |  Write  
+                            input(type='checkbox', value='View')
+                            |  View   
+                        tr
+                          th(scope='row')
+                          td(colspan=3)
+                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            br              
+                            input.register_btn(type='button', value='Submit' id="check")
+                  .msgdiv
+                  br                 
+                //.box-footer
+                  button.btn.btn-primary(type='submit')
+                    i.icon-ok
+                    |                             Submit
+              br
+              |   
+              br
+              .msg1div
+                table.table.table-bordered.table-responsive
+                  thead
+                    tr
+                      th Sr.No
+                      th Name
+                      th Email ID
+                      th Action               
+                  tbody
+                    - var cnt = 1;
+                    - each item in tabledata
+                      form(id='update_form'+cnt)
+                        tr
+                          td=cnt
+                          td=item.usename
+                          td
+                            input(type='checkbox', value='read')
+                            |  Read  
+                            input(type='checkbox', value='write')
+                            |  Write  
+                            input(type='checkbox', value='View')
+                            |  View                      
+                          td
+                            input.update_here(type='button',name=cnt, id=item.email_id, value="Update")
+                            input.delete_here(type='button',name=cnt, id=item.email_id, value="Delete")
+                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            input(type='hidden', value=item.email_id, name='email_id1')
+                          - cnt++;
+    

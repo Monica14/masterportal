@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>My AngularJS App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="server.js"></script>
+  </head>
+  <body ng-app="myApp">    
+  <div ng-controller="myCtrl">
+    <form>
+      Author:
+      <input type="text" ng-model="author">
+      <br>
+      <br> Title:
+      <input type="text" ng-model="title">
+      <br>
+      <br> Body:
+      <input type="author" ng-model="body">
+      <br>
+      <br>
+      <input type="submit" value="Submit" ng-click="submit()">
+    </form>
+  </div>
+</body>
+ </html>
