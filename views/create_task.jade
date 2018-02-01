@@ -1,0 +1,66 @@
+extends task_layout
+block content        
+        section.page.container          
+          .row
+              .box
+                .box-header
+                  i.icon-book
+                  h5 Settings
+                .box-content
+                  form(id='create_forms')
+                    table.table
+                      
+                      tbody
+                        tr
+                          th(scope='row') Project Name
+                          td 
+                            input(type='text', ng-model='project_name')                        
+                        tr
+                          th(scope='row') Department
+                          td 
+                            select(ng-model="project_dept")
+                                option select
+                                option Development
+                                option Testing
+                                option Admin
+                        tr
+                          th(scope='row') Start Date
+                          td 
+                            input(type='date', ng-model='start_date')  
+                        tr
+                          th(scope='row') End Date
+                          td 
+                            input(type='date', ng-model='end_date',data-date-format="DD MMMM YYYY")      
+                        tr
+                          th(scope='row') Project Manager
+                          td 
+                            select(ng-model="project_manager")
+                                option select
+                                option Monica
+                                option Shubhangi                                        
+                        tr
+                          th(scope='row') Status
+                          td 
+                            select(ng-model="project_status")
+                                option select
+                                option Started
+                                option Not Started
+                                option On Completion
+                                option Completed
+                        tr
+                          th(scope='row')
+                          td(colspan=3)
+                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            br              
+                            input.register_btn.btn.btn-primary(type='button', value='Save' ng-click="create_task()")                        
+                //.box-footer
+                  button.btn.btn-primary(type='submit')
+                    i.icon-ok
+                    |                             Submit
+              
+              br
+              |   
+              br
+              .msg1div
+                
+    

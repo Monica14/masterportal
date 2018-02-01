@@ -36,6 +36,7 @@ var report_data = require('./routes/report_data');
 var adminlogin = require('./routes/adminlogin');
 var dashboard = require('./routes/dashboard');
 var settings = require('./routes/settings');
+var create_task = require('./routes/create_task');
 
 var app = express();
 
@@ -109,6 +110,7 @@ app.use('/report_data', report_data);
 app.use('/adminlogin', adminlogin);
 app.use('/dashboard', dashboard);
 app.use('/settings', settings);
+app.use('/create_task', create_task);
 
 var sess;
 
