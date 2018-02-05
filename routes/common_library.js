@@ -6,7 +6,7 @@ var mysql = require('mysql');
 con = mysql.createConnection({
 	     host: "localhost",
 	     user: "root",
-	     password: "p@$$w0Rd1",
+	     password: "monica@123",
 	     database: 'unipart'
 });
 
@@ -63,7 +63,7 @@ var columnedit = function(dbname,tablename,field_data,field_list,callback)
   var con1 = mysql.createConnection({
          host: "localhost",
          user: "root",
-         password: "p@$$w0Rd1",
+         password: "monica@123",
          database: "unipart"
     });
   con1.query(finalstr1, function (err,     result) {
@@ -84,7 +84,7 @@ var columnadd = function(dbname,tablename,field_list,callback)
 	var con1 = mysql.createConnection({
          host: "localhost",
          user: "root",
-         password: "p@$$w0Rd1",
+         password: "monica@123",
          database: dbname.trim()
     });
 	con1.query(finalstr1, function (err,     result) {
@@ -106,7 +106,7 @@ var columndel = function(dbname,tablename,field_list,callback)
 	var con1 = mysql.createConnection({
          host: "localhost",
          user: "root",
-         password: "p@$$w0Rd1",
+         password: "monica@123",
          database: dbname
     });
 	con1.query(finalstr1, function (err,     result) {
@@ -126,7 +126,7 @@ var columnlist = function(dbname,tablename,field_list,callback)
   var con1 = mysql.createConnection({
          host: "localhost",
          user: "root",
-         password: "p@$$w0Rd1",
+         password: "monica@123",
          database: 'unipart'
     });
 	finalstr1 = "select * from information_schema.columns where table_schema = 'unipart' and table_name = '"+tablename+"'";
@@ -149,7 +149,7 @@ var columnlistnew = function(dbname,tablename,field_list,callback)
   var con1 = mysql.createConnection({
          host: "localhost",
          user: "root",
-         password: "p@$$w0Rd1",
+         password: "monica@123",
          database: dbname.trim()
     });
   con1.query(finalstr1, function (err,     result) {
@@ -169,7 +169,7 @@ var insert = function(table,data,callback)
 	con = mysql.createConnection({
        host: "localhost",
        user: "root",
-       password: "p@$$w0Rd1",
+       password: "monica@123",
        database: 'unipart'
 });
 	str = "insert into "+table+" (";
@@ -204,7 +204,7 @@ var select = function(table,where,callback)
 	con = mysql.createConnection({
        host: "localhost",
        user: "root",
-       password: "p@$$w0Rd1",
+       password: "monica@123",
        database: 'unipart'
 });
 	query = "select * from "+table+" "+where;
@@ -226,7 +226,7 @@ var selectdist = function(table,where,dist,callback)
 	con1 = mysql.createConnection({
        host: "localhost",
        user: "root",
-       password: "p@$$w0Rd1",
+       password: "monica@123",
        database: 'unipart'
 });
 	query = "select distinct "+dist+" from "+table+" "+where;
@@ -245,16 +245,16 @@ var selectdist = function(table,where,dist,callback)
 
 var update = function(table,setval,where,callback)
 {
-	//console.log(table);	
+	//console.log(setval);	
 	str = "update `"+table+"` set ";
-	console.log(setval);
+	//console.log(setval);
 	for(ans in setval)
 	{		
 		str += ans+'= "'+setval[ans]+'" ,'
 	}
 	str = str.slice(0,-1);
-	str = str+' '+where;
-	console.log(str);
+	str = str+where;
+	//console.log(str);
 	con.query(str, function (err,     result) {
    	if(err){
    		callback(err,null);
@@ -271,7 +271,7 @@ var deleterecord = function(table,setval,where,callback)
   con = mysql.createConnection({
        host: "localhost",
        user: "root",
-       password: "p@$$w0Rd1",
+       password: "monica@123",
        database: 'unipart'
   });
 	str = "DELETE FROM `"+table+"` "+where;	

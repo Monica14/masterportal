@@ -5,20 +5,20 @@ block content
               .box
                 .box-header
                   i.icon-book
-                  h5 Settings
+                  h5 #{title}
                 .box-content
-                  form(id='create_forms')
+                  form(id='create_forms',ng-controller='task as up',name="up.upload_form")
                     table.table
                       
                       tbody
                         tr
                           th(scope='row') Project Name
                           td 
-                            input(type='text', ng-model='project_name')                        
+                            input(type='text', ng-model='up.project_name',value="{{update_task['0']['project_name']}}")                        
                         tr
                           th(scope='row') Department
                           td 
-                            select(ng-model="project_dept")
+                            select(ng-model="up.project_dept",value="{{update_task['0']['department']}}")
                                 option select
                                 option Development
                                 option Testing
@@ -26,33 +26,54 @@ block content
                         tr
                           th(scope='row') Start Date
                           td 
-                            input(type='date', ng-model='start_date')  
+                            input(type='date', ng-model='up.start_date',value="{{update_task['0']['start_date']}}")  
                         tr
                           th(scope='row') End Date
                           td 
-                            input(type='date', ng-model='end_date',data-date-format="DD MMMM YYYY")      
+                            input(type='date', ng-model='up.end_date',data-date-format="DD MMMM YYYY",value="{{update_task['0']['end_date']}}")      
                         tr
                           th(scope='row') Project Manager
                           td 
-                            select(ng-model="project_manager")
+                            select(ng-model="up.project_manager",value="{{update_task['0']['manager_name']}}")
                                 option select
                                 option Monica
                                 option Shubhangi                                        
                         tr
                           th(scope='row') Status
                           td 
-                            select(ng-model="project_status")
+                            select(ng-model="up.project_status",value="{{update_task['0']['status']}}")
                                 option select
                                 option Started
                                 option Not Started
                                 option On Completion
                                 option Completed
                         tr
+                          th(scope='row') Upload Document
+                          td
+                            input(type="file",ngf-select,ng-model="up.file",name="file",ngf-pattern="'image/*'",accept="image/*",ngf-max-size="20MB",ngf-keep="'distinct'")        
+                            div(ng-repeat='f in up.file', ng-if='f')
+                              img(style='width:100px;', ngf-thumbnail="f || '/thumb.jpg'")
+                              button(ng-click='up.del_img(f)') Delete
+                        tr
                           th(scope='row')
                           td(colspan=3)
-                            input(type='hidden', name='tablename',value='access_rights',id='tablename')
+                            input(type='hidden', ng-model='up.update_id',value="{{update_task['0']['id']}}",name='update_id')
                             br              
-                            input.register_btn.btn.btn-primary(type='button', value='Save' ng-click="create_task()")                        
+                            input.register_btn.btn.btn-primary(type='submit', value='Save' ng-click="up.create_task()")                        
+                            input(type="button",ng-click="update_data(update_task['0']['id'])",value="Update")
+                    table.table
+                      thead                        
+                        th Project Name
+                        th Manager Name 
+                        th Status
+                      tbody
+                        tr(ng-repeat="item in list")                          
+                          td {{item.project_name}}
+                          td {{item.manager_name}}
+                          td 
+                            input(type="button",ng-click="edit_data(item.id)",value="Edit")
+                              
+                
                 //.box-footer
                   button.btn.btn-primary(type='submit')
                     i.icon-ok
